@@ -3,7 +3,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 80vh;
+  min-height: 80vh;
+  padding: 30rpx;
+  box-sizing: border-box;
 }
 
 .placeholder-box {
@@ -14,6 +16,7 @@
   border: 2rpx dashed #FF8C47;
   border-radius: 16rpx;
   background-color: #FFFFFF;
+  margin-bottom: 40rpx;
 }
 
 .placeholder-text {
@@ -23,14 +26,52 @@
   margin-bottom: 20rpx;
 }
 
-.motto {
-  font-size: 28rpx;
-  color: #888888;
-}
-
 .sub-text {
   font-size: 24rpx;
   color: #999999;
 }
+
+/* 新增：入口卡片样式 */
+.entry-card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #FFFFFF;
+  border-radius: 24rpx;
+  padding: 30rpx;
+  box-shadow: 0 4rpx 12rpx rgba(255, 140, 71, 0.15);
+  box-sizing: border-box;
+}
+
+.entry-emoji {
+  font-size: 56rpx;
+  margin-right: 24rpx;
+}
+
+.entry-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.entry-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 8rpx;
+}
+
+.entry-desc {
+  font-size: 24rpx;
+  color: #999999;
+}
+
+.entry-arrow {
+  font-size: 32rpx;
+  color: #FF8C47;
+  font-weight: bold;
+  margin-left: 20rpx;
+}
+
 
 

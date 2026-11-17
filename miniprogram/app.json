@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/mine/mine"
+    "pages/mine/mine",
+    "pages/category/category"
   ],
   "window": {
     "navigationBarBackgroundColor": "#FF8C47",

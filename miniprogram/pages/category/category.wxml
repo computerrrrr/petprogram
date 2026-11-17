@@ -1,0 +1,30 @@
+<!-- 分类页面 - 骨架占位 -->
+<view class="category-container">
+  <view class="category-grid">
+    
+    <!-- 猫猫卡片 -->
+    <view class="category-card">
+      <text class="card-emoji">🐱</text>
+      <text class="card-title">猫猫</text>
+    </view>
+
+    <!-- 狗狗卡片 -->
+    <view class="category-card">
+      <text class="card-emoji">🐶</text>
+      <text class="card-title">狗狗</text>
+    </view>
+
+    <!-- 鸟类卡片 -->
+    <view class="category-card">
+      <text class="card-emoji">🐦</text>
+      <text class="card-title">鸟类</text>
+    </view>
+
+    <!-- 异宠卡片 -->
+    <view class="category-card">
+      <text class="card-emoji">🦎</text>
+      <text class="card-title">异宠</text>
+    </view>
+
+  </view>
+</view>

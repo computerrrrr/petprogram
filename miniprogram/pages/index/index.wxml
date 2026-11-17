@@ -5,4 +5,14 @@
     <text class="motto">{{motto}}</text>
     <text class="sub-text">清新暖橙色萌宠简约风</text>
   </view>
+
+  <!-- 新增：跳转分类页面入口卡片 -->
+  <view class="entry-card" bindtap="goToCategory">
+    <text class="entry-emoji">🐾</text>
+    <view class="entry-info">
+      <text class="entry-title">探索宠物分类</text>
+      <text class="entry-desc">猫猫、狗狗、鸟类与异宠</text>
+    </view>
+    <text class="entry-arrow">></text>
+  </view>
 </view>
