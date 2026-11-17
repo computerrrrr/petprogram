@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+.placeholder-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40rpx;
+  border: 2rpx dashed #FF8C47;
+  border-radius: 16rpx;
+  background-color: #FFFFFF;
+}
+
+.placeholder-text {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #FF8C47;
+  margin-bottom: 20rpx;
+}
+
+.motto {
+  font-size: 28rpx;
+  color: #888888;
+}
+
+.sub-text {
+  font-size: 24rpx;
+  color: #999999;
+}
+
+

@@ -1,0 +1,7 @@
+<!-- 我的 - 骨架占位 -->
+<view class="container">
+  <view class="placeholder-box">
+    <text class="placeholder-text">🐾 个人中心区域</text>
+    <text class="sub-text">待后续迭代填充</text>
+  </view>
+</view>
