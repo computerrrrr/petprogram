@@ -18,6 +18,16 @@ Page({
       }
     ]
   },
+  
+
+  // 新增：跳转动态详情
+  goToDetail(e) {
+    const id = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: `/pages/detail/detail?id=${id}`
+    });
+  },
+
   onLoad() {
-  }
+  },
 })

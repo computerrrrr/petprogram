@@ -26,14 +26,14 @@ Page({
   generateMockData(type, name) {
     const mockData = [
       {
-        id: 1,
+        id: 10,
         category: name,
         nickname: `${name}爱好者`,
         image: '',
         desc: `这是一只非常可爱的${name}，每天都在快乐地成长！`
       },
       {
-        id: 2,
+        id: 20,
         category: name,
         nickname: `资深${name}铲屎官`,
         image: '',
@@ -43,6 +43,14 @@ Page({
 
     this.setData({
       feedList: mockData
+    });
+  },
+
+  // 新增：跳转动态详情
+  goToDetail(e) {
+    const id = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: `/pages/detail/detail?id=${id}`
     });
   }
 })

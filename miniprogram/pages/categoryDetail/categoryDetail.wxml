@@ -9,7 +9,7 @@
 
   <!-- 宠物动态卡片列表 -->
   <view class="feed-list">
-    <view class="feed-card" wx:for="{{feedList}}" wx:key="id">
+    <view class="feed-card" wx:for="{{feedList}}" wx:key="id" bindtap="goToDetail" data-id="{{item.id}}">
       <!-- 顶部：分类标签 + 用户昵称 -->
       <view class="feed-header">
         <view class="feed-tag">{{item.category}}</view>

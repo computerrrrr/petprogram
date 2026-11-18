@@ -1,0 +1,20 @@
+<!-- 动态详情页 -->
+<view class="detail-container" wx:if="{{detailData}}">
+  
+  <!-- 顶部：分类标签 + 用户昵称 -->
+  <view class="detail-header">
+    <view class="detail-tag">{{detailData.category}}</view>
+    <text class="detail-nickname">{{detailData.nickname}}</text>
+  </view>
+
+  <!-- 宠物配图占位区域 (详情页大图) -->
+  <view class="detail-image-box">
+    <text class="detail-image-placeholder">🖼️ 详情大图占位</text>
+  </view>
+
+  <!-- 正文内容 -->
+  <view class="detail-content-box">
+    <text class="detail-content">{{detailData.desc}}</text>
+  </view>
+
+</view>

@@ -18,7 +18,7 @@
     </view>
     <!-- 新增：有数据时渲染列表骨架 -->
     <view class="feed-list" wx:if="{{myWorksList.length > 0}}">
-      <view class="feed-card" wx:for="{{myWorksList}}" wx:key="id">
+      <view class="feed-card" wx:for="{{myWorksList}}" wx:key="id" bindtap="goToDetail" data-id="{{item.id}}">
         <!-- 顶部：分类标签 + 用户昵称 -->
         <view class="feed-header">
           <view class="feed-tag">{{item.category}}</view>

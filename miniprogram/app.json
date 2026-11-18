@@ -4,7 +4,8 @@
     "pages/mine/mine",
     "pages/category/category",
     "pages/publish/publish",
-    "pages/categoryDetail/categoryDetail"
+    "pages/categoryDetail/categoryDetail",
+    "pages/detail/detail"
   ],
   "window": {
     "navigationBarBackgroundColor": "#FF8C47",
