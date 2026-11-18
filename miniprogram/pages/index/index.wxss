@@ -74,5 +74,67 @@
   margin-left: 20rpx;
 }
 
+/* 新增：宠物动态列表样式 */
+.feed-list {
+  padding: 0 30rpx 30rpx;
+}
 
+.feed-card {
+  background-color: #FFFFFF;
+  border-radius: 24rpx;
+  padding: 30rpx;
+  margin-bottom: 30rpx;
+  box-shadow: 0 4rpx 12rpx rgba(255, 140, 71, 0.1);
+}
+
+/* 卡片顶部 */
+.feed-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.feed-tag {
+  padding: 6rpx 16rpx;
+  border-radius: 20rpx;
+  font-size: 22rpx;
+  background-color: #FFF1E6;
+  color: #FF8C47;
+  margin-right: 16rpx;
+  font-weight: 500;
+}
+
+.feed-nickname {
+  font-size: 26rpx;
+  color: #666666;
+  font-weight: 500;
+}
+
+/* 宠物配图占位 */
+.feed-image-box {
+  width: 100%;
+  height: 360rpx;
+  background-color: #F8F8F8;
+  border-radius: 16rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20rpx;
+}
+
+.feed-image-placeholder {
+  font-size: 28rpx;
+  color: #CCCCCC;
+}
+
+/* 文字简介 */
+.feed-desc-box {
+  margin-top: 10rpx;
+}
+
+.feed-desc {
+  font-size: 28rpx;
+  color: #333333;
+  line-height: 1.6;
+}
 

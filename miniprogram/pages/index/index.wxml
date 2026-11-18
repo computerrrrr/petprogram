@@ -25,4 +25,25 @@
     </view>
     <text class="entry-arrow">></text>
   </view>
+
+  <!-- 新增：宠物动态卡片列表骨架 -->
+  <view class="feed-list">
+    <view class="feed-card" wx:for="{{feedList}}" wx:key="id">
+      <!-- 顶部：分类标签 + 用户昵称 -->
+      <view class="feed-header">
+        <view class="feed-tag">{{item.category}}</view>
+        <text class="feed-nickname">{{item.nickname}}</text>
+      </view>
+      
+      <!-- 宠物配图占位区域 -->
+      <view class="feed-image-box">
+        <text class="feed-image-placeholder">🖼️ 图片占位</text>
+      </view>
+      
+      <!-- 底部：文字简介 -->
+      <view class="feed-desc-box">
+        <text class="feed-desc">{{item.desc}}</text>
+      </view>
+    </view>
+  </view>
 </view>
