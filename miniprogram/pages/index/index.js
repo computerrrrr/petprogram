@@ -8,5 +8,11 @@ Page({
     wx.navigateTo({
       url: '/pages/category/category'
     })
+  },
+  // 新增：跳转到发布页面
+  goToPublish() {
+    wx.navigateTo({
+      url: '/pages/publish/publish'
+    })
   }
 })

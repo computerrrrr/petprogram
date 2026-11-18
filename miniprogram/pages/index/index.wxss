@@ -41,6 +41,7 @@
   padding: 30rpx;
   box-shadow: 0 4rpx 12rpx rgba(255, 140, 71, 0.15);
   box-sizing: border-box;
+  margin-bottom: 30rpx; /* 确保多个卡片之间有间距 */
 }
 
 .entry-emoji {

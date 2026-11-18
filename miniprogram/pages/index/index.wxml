@@ -15,4 +15,14 @@
     </view>
     <text class="entry-arrow">></text>
   </view>
+
+  <!-- 新增：跳转发布页面入口卡片 -->
+  <view class="entry-card" bindtap="goToPublish">
+    <text class="entry-emoji">✏️</text>
+    <view class="entry-info">
+      <text class="entry-title">发布萌宠动态</text>
+      <text class="entry-desc">记录和宝贝的温馨时刻</text>
+    </view>
+    <text class="entry-arrow">></text>
+  </view>
 </view>
