@@ -1,0 +1,31 @@
+<!-- 分类详情页 - 骨架占位 -->
+<view class="detail-container">
+  
+  <!-- 顶部：当前分类名称展示 -->
+  <view class="category-header">
+    <text class="header-title">当前分类：{{categoryName}}</text>
+    <text class="header-desc">以下为模拟的静态数据</text>
+  </view>
+
+  <!-- 宠物动态卡片列表 -->
+  <view class="feed-list">
+    <view class="feed-card" wx:for="{{feedList}}" wx:key="id">
+      <!-- 顶部：分类标签 + 用户昵称 -->
+      <view class="feed-header">
+        <view class="feed-tag">{{item.category}}</view>
+        <text class="feed-nickname">{{item.nickname}}</text>
+      </view>
+      
+      <!-- 宠物配图占位区域 -->
+      <view class="feed-image-box">
+        <text class="feed-image-placeholder">🖼️ 图片占位</text>
+      </view>
+      
+      <!-- 底部：文字简介 -->
+      <view class="feed-desc-box">
+        <text class="feed-desc">{{item.desc}}</text>
+      </view>
+    </view>
+  </view>
+
+</view>

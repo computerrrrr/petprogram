@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/mine/mine",
     "pages/category/category",
-    "pages/publish/publish"
+    "pages/publish/publish",
+    "pages/categoryDetail/categoryDetail"
   ],
   "window": {
     "navigationBarBackgroundColor": "#FF8C47",
