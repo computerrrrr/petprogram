@@ -65,6 +65,24 @@
 //   }
 // })
 Page({
-  data: {},
-  onLoad() {}
+  data: {
+    // 分类数据源
+    categories: [
+      { key: 'cat', emoji: '🐱', name: '猫猫' },
+      { key: 'dog', emoji: '🐶', name: '狗狗' },
+      { key: 'bird', emoji: '🐦', name: '鸟类' },
+      { key: 'exotic', emoji: '🦎', name: '异宠' }
+    ],
+    // 当前选中的分类
+    selectedCategory: 'cat',
+  },
+  onLoad() {},
+  // 新增：切换选中分类交互骨架
+  onSelectCategory(e) {
+    const key = e.currentTarget.dataset.key;
+    if (key === this.data.selectedCategory) return; // 点击已选中的无需重复赋值
+    this.setData({
+      selectedCategory: key
+    });
+  }
 })

@@ -5,10 +5,14 @@
   <view class="section-card">
     <view class="section-title">选择宠物分类</view>
     <view class="category-tags">
-      <view class="tag-item tag-active">🐱 猫猫</view>
-      <view class="tag-item">🐶 狗狗</view>
-      <view class="tag-item">🐦 鸟类</view>
-      <view class="tag-item">🦎 异宠</view>
+      <view 
+        class="tag-item {{item.key === selectedCategory ? 'tag-active' : ''}}" 
+        wx:for="{{categories}}" 
+        wx:key="key"
+        bindtap="onSelectCategory"
+        data-key="{{item.key}}">
+        {{item.emoji}} {{item.name}}
+      </view>
     </view>
   </view>
 
