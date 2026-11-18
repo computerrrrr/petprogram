@@ -75,6 +75,9 @@ Page({
     ],
     // 当前选中的分类
     selectedCategory: 'cat',
+
+    // 新增：图片预览列表
+    imageList: []
   },
   onLoad() {},
   // 新增：切换选中分类交互骨架
@@ -84,5 +87,44 @@ Page({
     this.setData({
       selectedCategory: key
     });
+  },
+
+   // 新增：选择图片交互骨架
+  onChooseImage() {
+    const currentCount = this.data.imageList.length;
+    const maxCount = 9; // 最多支持9张图
+    const remainingCount = maxCount - currentCount;
+
+    if (remainingCount <= 0) {
+      wx.showToast({ title: '最多上传9张图片', icon: 'none' });
+      return;
+    }
+
+    wx.chooseMedia({
+      count: remainingCount,
+      mediaType: ['image'],
+      sourceType: ['album', 'camera'],
+      success: (res) => {
+        // 提取临时文件路径
+        const tempFilePaths = res.tempFiles.map(file => file.tempFilePath);
+        this.setData({
+          imageList: [...this.data.imageList, ...tempFilePaths]
+        });
+      },
+      fail: (err) => {
+        // 用户取消选择时不做处理
+        if (err.errMsg.indexOf('cancel') === -1) {
+          wx.showToast({ title: '选择图片失败', icon: 'none' });
+        }
+      }
+    });
+  },
+
+  // 新增：删除预览图片交互骨架
+  onDeleteImage(e) {
+    const index = e.currentTarget.dataset.index;
+    const imageList = this.data.imageList;
+    imageList.splice(index, 1);
+    this.setData({ imageList });
   }
 })

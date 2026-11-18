@@ -16,11 +16,18 @@
     </view>
   </view>
 
-  <!-- 2. 图片上传占位区域 -->
+  <!-- 2. 图片上传预览区域 -->
   <view class="section-card">
     <view class="section-title">添加图片</view>
     <view class="upload-area">
-      <view class="upload-placeholder">
+      <!-- 已选图片预览列表 -->
+      <view class="image-item" wx:for="{{imageList}}" wx:key="*this">
+        <image class="preview-image" src="{{item}}" mode="aspectFill" />
+        <view class="delete-btn" catchtap="onDeleteImage" data-index="{{index}}">×</view>
+      </view>
+      
+      <!-- 动态占位框：不足9张时显示 -->
+      <view class="upload-placeholder" bindtap="onChooseImage" wx:if="{{imageList.length < 9}}">
         <text class="upload-icon">+</text>
         <text class="upload-text">上传图片</text>
       </view>
