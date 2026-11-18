@@ -1,29 +1,111 @@
-.container {
+/* 我的页面样式 */
+.mine-container {
+  padding: 30rpx;
+  background-color: #FFF8F0;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* 1. 用户信息区 */
+.user-info-card {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding: 50rpx 0 40rpx;
+}
+
+.avatar-box {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  box-shadow: 0 8rpx 20rpx rgba(255, 140, 71, 0.2);
+  display: flex;
   align-items: center;
   justify-content: center;
-  height: 80vh;
-}
-
-.placeholder-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 40rpx;
-  border: 2rpx dashed #FF8C47;
-  border-radius: 16rpx;
-  background-color: #FFFFFF;
-}
-
-.placeholder-text {
-  font-size: 36rpx;
-  font-weight: bold;
-  color: #FF8C47;
   margin-bottom: 20rpx;
 }
 
-.sub-text {
+.avatar-emoji {
+  font-size: 80rpx;
+}
+
+.nickname {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 8rpx;
+}
+
+.user-id {
   font-size: 24rpx;
   color: #999999;
+}
+
+/* 通用卡片样式 */
+.section-card {
+  background-color: #FFFFFF;
+  border-radius: 24rpx;
+  padding: 30rpx;
+  margin-top: 30rpx;
+  box-shadow: 0 4rpx 12rpx rgba(255, 140, 71, 0.1);
+}
+
+/* 2. 我的作品模块 */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30rpx;
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333333;
+}
+
+.section-more {
+  font-size: 24rpx;
+  color: #FF8C47;
+}
+
+.works-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30rpx 0;
+}
+
+.empty-icon {
+  font-size: 60rpx;
+  margin-bottom: 16rpx;
+}
+
+.empty-text {
+  font-size: 26rpx;
+  color: #999999;
+}
+
+/* 3. 基础设置项 */
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24rpx 0;
+  border-bottom: 1rpx solid #F5F5F5;
+}
+
+.setting-last {
+  border-bottom: none;
+}
+
+.setting-label {
+  font-size: 30rpx;
+  color: #333333;
+}
+
+.setting-arrow {
+  font-size: 28rpx;
+  color: #CCCCCC;
 }
