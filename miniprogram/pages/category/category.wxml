@@ -3,25 +3,25 @@
   <view class="category-grid">
     
     <!-- 猫猫卡片 -->
-    <view class="category-card">
+    <view class="category-card" bindtap="goToCategoryDetail" data-type="cat">
       <text class="card-emoji">🐱</text>
       <text class="card-title">猫猫</text>
     </view>
 
     <!-- 狗狗卡片 -->
-    <view class="category-card">
+    <view class="category-card" bindtap="goToCategoryDetail" data-type="dog">
       <text class="card-emoji">🐶</text>
       <text class="card-title">狗狗</text>
     </view>
 
     <!-- 鸟类卡片 -->
-    <view class="category-card">
+    <view class="category-card" bindtap="goToCategoryDetail" data-type="bird">
       <text class="card-emoji">🐦</text>
       <text class="card-title">鸟类</text>
     </view>
 
     <!-- 异宠卡片 -->
-    <view class="category-card">
+    <view class="category-card" bindtap="goToCategoryDetail" data-type="exotic">
       <text class="card-emoji">🦎</text>
       <text class="card-title">异宠</text>
     </view>
