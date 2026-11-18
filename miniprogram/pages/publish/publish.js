@@ -126,5 +126,28 @@ Page({
     const imageList = this.data.imageList;
     imageList.splice(index, 1);
     this.setData({ imageList });
+  },
+
+  // 新增：文本输入双向数据绑定
+  onContentInput(e) {
+    this.setData({
+      content: e.detail.value
+    });
+  },
+
+  // 新增：提交按钮点击事件骨架
+  onSubmit() {
+    const { selectedCategory, imageList, content } = this.data;
+    
+    // 在控制台打印当前表单数据，仅做骨架验证，不做真实提交
+    console.log('=== 发布表单数据收集 ===');
+    console.log('选中分类:', selectedCategory);
+    console.log('图片列表:', imageList);
+    console.log('输入文本:', content);
+    
+    wx.showToast({
+      title: '骨架：仅控制台打印',
+      icon: 'none'
+    });
   }
 })

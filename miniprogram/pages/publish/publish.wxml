@@ -34,13 +34,20 @@
     </view>
   </view>
 
-  <!-- 3. 文字输入框 -->
+  <!-- 3. 文字输入框（新增双向数据绑定） -->
   <view class="section-card">
     <view class="section-title">分享萌宠日常</view>
-    <textarea class="content-input" placeholder="记录和宝贝的温馨时刻..." placeholder-style="color: #CCCCCC;" maxlength="500" />
+    <textarea 
+      class="content-input" 
+      placeholder="记录和宝贝的温馨时刻..." 
+      placeholder-style="color: #CCCCCC;" 
+      maxlength="500" 
+      value="{{content}}"
+      bindinput="onContentInput" 
+    />
   </view>
 
-  <!-- 4. 提交按钮 -->
-  <button class="submit-btn">发布动态</button>
+  <!-- 4. 提交按钮（新增点击事件骨架） -->
+  <button class="submit-btn" bindtap="onSubmit">发布动态</button>
 
 </view>
