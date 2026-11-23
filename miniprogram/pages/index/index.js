@@ -30,7 +30,12 @@ Page({
       }
     ]
   },
-  onLoad() {},
+  onLoad() {
+    // 初始化时展示全部数据
+    this.setData({
+      filteredFeedList: this.data.feedList
+    });
+  },
 
   // 新增：搜索框输入交互骨架
   onSearchInput(e) {
@@ -38,8 +43,8 @@ Page({
     this.setData({
       searchKeyword: keyword
     });
-    // 仅做本地输入值收集，控制台打印输入关键词
-    console.log('当前搜索关键词:', keyword);
+    // 触发本地过滤
+    this.filterFeedList(keyword);
   },
 
   // 新增：清空搜索框交互骨架
@@ -47,7 +52,29 @@ Page({
     this.setData({
       searchKeyword: ''
     });
-    console.log('已清空搜索内容');
+    // 清空后恢复展示全部动态
+    this.filterFeedList('');
+  },
+
+  // 新增：本地数据模糊匹配过滤逻辑
+  filterFeedList(keyword) {
+    const { feedList } = this.data;
+    if (!keyword.trim()) {
+      // 关键词为空，恢复全部
+      this.setData({ filteredFeedList: feedList });
+      return;
+    }
+
+    // 模糊匹配标题(分类)和描述
+    const filtered = feedList.filter(item => {
+      const matchCategory = item.category.includes(keyword);
+      const matchDesc = item.desc.includes(keyword);
+      return matchCategory || matchDesc;
+    });
+
+    this.setData({
+      filteredFeedList: filtered
+    });
   },
 
   // 新增：跳转到分类页面

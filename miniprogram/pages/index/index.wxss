@@ -182,3 +182,21 @@
   line-height: 1.6;
 }
 
+/* 新增：无匹配结果空状态样式 */
+.empty-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60rpx 0;
+}
+
+.empty-icon {
+  font-size: 80rpx;
+  margin-bottom: 20rpx;
+}
+
+.empty-text {
+  font-size: 28rpx;
+  color: #999999;
+}
+
