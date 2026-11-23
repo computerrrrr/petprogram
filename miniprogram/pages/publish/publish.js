@@ -142,20 +142,32 @@ Page({
   onSubmit() {
     const { selectedCategory, imageList, content } = this.data;
     
-    // 1. 在控制台打印当前表单数据
+     // 1. 表单校验骨架
+    if (!selectedCategory) {
+      wx.showToast({ title: '请选择宠物分类', icon: 'none' });
+      return; // 阻止后续逻辑
+    }
+    
+    // 去除首尾空格后校验正文是否为空
+    if (!content.trim()) {
+      wx.showToast({ title: '请填写正文描述', icon: 'none' });
+      return; // 阻止后续逻辑
+    }
+
+    // 2. 校验通过，继续执行原有打印表单逻辑
     console.log('=== 发布表单数据收集 ===');
     console.log('选中分类:', selectedCategory);
     console.log('图片列表:', imageList);
     console.log('输入文本:', content);
     
-    // 2. 显示成功提示
+    // 3. 显示成功提示
     wx.showToast({
       title: '发布成功',
       icon: 'success',
-      duration: 1500 // toast 显示时间（毫秒）
+      duration: 1500
     });
 
-    // 3. 延时跳转回首页
+    // 4. 延时跳转回首页
     setTimeout(() => {
       wx.switchTab({
         url: '/pages/index/index'
