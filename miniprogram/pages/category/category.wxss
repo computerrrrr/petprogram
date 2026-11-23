@@ -26,6 +26,13 @@
   transition: transform 0.2s ease;
 }
 
+/* 新增：选中态高亮样式 */
+.card-active {
+  background-color: #FFF1E6; /* 暖橙淡色背景 */
+  border: 2rpx solid #FF8C47; /* 暖橙色边框 */
+  box-shadow: 0 6rpx 16rpx rgba(255, 140, 71, 0.25); /* 加深阴影 */
+}
+
 /* 卡片 Emoji 图标 */
 .card-emoji {
   font-size: 80rpx;
@@ -37,4 +44,20 @@
   font-size: 32rpx;
   font-weight: 500;
   color: #333333;
+}
+
+/* 新增：卡片内跳转按钮 */
+.card-btn {
+  font-size: 24rpx;
+  color: #FF8C47;
+  background-color: #FFFFFF;
+  padding: 6rpx 24rpx;
+  border-radius: 30rpx;
+  border: 1rpx solid #FF8C47;
+}
+
+/* 选中态时按钮颜色反转 */
+.card-active .card-btn {
+  background-color: #FF8C47;
+  color: #FFFFFF;
 }

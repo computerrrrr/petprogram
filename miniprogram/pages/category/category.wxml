@@ -3,27 +3,48 @@
   <view class="category-grid">
     
     <!-- 猫猫卡片 -->
-    <view class="category-card" bindtap="goToCategoryDetail" data-type="cat" data-name="猫猫">
+    <view 
+      class="category-card {{selectedCategory === 'cat' ? 'card-active' : ''}}" 
+      bindtap="onSelectCategory" 
+      data-type="cat" 
+      data-name="猫猫">
       <text class="card-emoji">🐱</text>
       <text class="card-title">猫猫</text>
+      <!-- 将跳转事件绑定到子按钮，避免与选中事件冲突 -->
+      <view class="card-btn" catchtap="goToCategoryDetail" data-type="cat" data-name="猫猫">去看看</view>
     </view>
 
     <!-- 狗狗卡片 -->
-    <view class="category-card" bindtap="goToCategoryDetail" data-type="dog" data-name="狗狗">
+    <view 
+      class="category-card {{selectedCategory === 'dog' ? 'card-active' : ''}}" 
+      bindtap="onSelectCategory" 
+      data-type="dog" 
+      data-name="狗狗">
       <text class="card-emoji">🐶</text>
       <text class="card-title">狗狗</text>
+      <view class="card-btn" catchtap="goToCategoryDetail" data-type="dog" data-name="狗狗">去看看</view>
     </view>
 
     <!-- 鸟类卡片 -->
-    <view class="category-card" bindtap="goToCategoryDetail" data-type="bird" data-name="鸟类">
+    <view 
+      class="category-card {{selectedCategory === 'bird' ? 'card-active' : ''}}" 
+      bindtap="onSelectCategory" 
+      data-type="bird" 
+      data-name="鸟类">
       <text class="card-emoji">🐦</text>
       <text class="card-title">鸟类</text>
+      <view class="card-btn" catchtap="goToCategoryDetail" data-type="bird" data-name="鸟类">去看看</view>
     </view>
 
     <!-- 异宠卡片 -->
-    <view class="category-card" bindtap="goToCategoryDetail" data-type="exotic" data-name="异宠">
+    <view 
+      class="category-card {{selectedCategory === 'exotic' ? 'card-active' : ''}}" 
+      bindtap="onSelectCategory" 
+      data-type="exotic" 
+      data-name="异宠">
       <text class="card-emoji">🦎</text>
       <text class="card-title">异宠</text>
+      <view class="card-btn" catchtap="goToCategoryDetail" data-type="exotic" data-name="异宠">去看看</view>
     </view>
 
   </view>
