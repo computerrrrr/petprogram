@@ -8,8 +8,8 @@
   </view>
 
   <!-- 宠物配图占位区域 (详情页大图) -->
-  <view class="detail-image-box">
-    <text class="detail-image-placeholder">🖼️ 详情大图占位</text>
+  <view class="detail-image-box" bindtap="onPreviewImage" data-urls="{{detailData.imageUrls}}">
+    <text class="detail-image-placeholder">🖼️ 点击预览大图</text>
   </view>
 
   <!-- 正文内容 -->

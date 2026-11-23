@@ -17,8 +17,8 @@
       </view>
       
       <!-- 宠物配图占位区域 -->
-      <view class="feed-image-box">
-        <text class="feed-image-placeholder">🖼️ 图片占位</text>
+      <view class="feed-image-box" catchtap="onPreviewImage" data-urls="{{item.imageUrls}}">
+        <text class="feed-image-placeholder">🖼️ 点击预览图片</text>
       </view>
       
       <!-- 底部：文字简介 -->

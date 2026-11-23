@@ -29,14 +29,14 @@ Page({
         id: 10,
         category: name,
         nickname: `${name}爱好者`,
-        image: '',
+        imageUrls: ['https://cdn.pixabay.com/photo/2024/02/28/07/42/european-shorthair-8601492_1280.jpg'],
         desc: `这是一只非常可爱的${name}，每天都在快乐地成长！`
       },
       {
         id: 20,
         category: name,
         nickname: `资深${name}铲屎官`,
-        image: '',
+        imageUrls: ['https://cdn.pixabay.com/photo/2023/08/18/15/36/dog-8198719_1280.jpg'],
         desc: `分享一些养${name}的日常小贴士，希望对大家有帮助~`
       }
     ];
@@ -51,6 +51,16 @@ Page({
     const id = e.currentTarget.dataset.id;
     wx.navigateTo({
       url: `/pages/detail/detail?id=${id}`
+    });
+  },
+
+  // 新增：图片预览交互骨架
+  onPreviewImage(e) {
+    const urls = e.currentTarget.dataset.urls || [];
+    if (urls.length === 0) return;
+    wx.previewImage({
+      current: urls[0],
+      urls: urls
     });
   }
 })
