@@ -34,6 +34,24 @@
   color: #333333;
 }
 
+/* 新增：清空按钮样式 */
+.clear-btn {
+  width: 36rpx;
+  height: 36rpx;
+  background-color: #DDDDDD;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10rpx;
+}
+
+.clear-icon {
+  font-size: 24rpx;
+  color: #FFFFFF;
+  line-height: 1;
+}
+
 .placeholder-box {
   display: flex;
   flex-direction: column;

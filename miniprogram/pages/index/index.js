@@ -42,6 +42,14 @@ Page({
     console.log('当前搜索关键词:', keyword);
   },
 
+  // 新增：清空搜索框交互骨架
+  onClearSearch() {
+    this.setData({
+      searchKeyword: ''
+    });
+    console.log('已清空搜索内容');
+  },
+
   // 新增：跳转到分类页面
   goToCategory() {
     wx.navigateTo({

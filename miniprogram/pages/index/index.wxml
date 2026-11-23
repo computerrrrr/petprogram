@@ -12,9 +12,14 @@
         bindinput="onSearchInput"
         confirm-type="search"
       />
+
+      <!-- 新增：清空按钮，有输入内容时才显示 -->
+      <view class="clear-btn" wx:if="{{searchKeyword.length > 0}}" catchtap="onClearSearch">
+        <text class="clear-icon">×</text>
+      </view>
     </view>
   </view>
-  
+
   <view class="placeholder-box">
     <text class="placeholder-text">🏠 首页内容区域</text>
     <text class="motto">{{motto}}</text>
