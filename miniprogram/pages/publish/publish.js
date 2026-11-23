@@ -77,7 +77,10 @@ Page({
     selectedCategory: 'cat',
 
     // 新增：图片预览列表
-    imageList: []
+    imageList: [],
+
+    // 新增：文本输入内容
+    content: ''
   },
   onLoad() {},
   // 新增：切换选中分类交互骨架
@@ -139,15 +142,24 @@ Page({
   onSubmit() {
     const { selectedCategory, imageList, content } = this.data;
     
-    // 在控制台打印当前表单数据，仅做骨架验证，不做真实提交
+    // 1. 在控制台打印当前表单数据
     console.log('=== 发布表单数据收集 ===');
     console.log('选中分类:', selectedCategory);
     console.log('图片列表:', imageList);
     console.log('输入文本:', content);
     
+    // 2. 显示成功提示
     wx.showToast({
-      title: '骨架：仅控制台打印',
-      icon: 'none'
+      title: '发布成功',
+      icon: 'success',
+      duration: 1500 // toast 显示时间（毫秒）
     });
+
+    // 3. 延时跳转回首页
+    setTimeout(() => {
+      wx.switchTab({
+        url: '/pages/index/index'
+      });
+    }, 1500);
   }
 })
