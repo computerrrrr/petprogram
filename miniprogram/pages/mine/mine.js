@@ -6,14 +6,14 @@ Page({
         id: 101,
         category: '🐱 猫猫',
         nickname: '宠物爱好者',
-        image: '',
+        imageUrls: ['https://cdn.pixabay.com/photo/2024/02/28/07/42/european-shorthair-8601492_1280.jpg'],
         desc: '我家橘猫今天又睡了一天，雷打不动~'
       },
       {
         id: 102,
         category: '🐶 狗狗',
         nickname: '宠物爱好者',
-        image: '',
+        imageUrls: ['https://cdn.pixabay.com/photo/2023/08/18/15/36/dog-8198719_1280.jpg'],
         desc: '带着修勾去海边浪啦，开心到飞起！'
       }
     ]
@@ -30,4 +30,14 @@ Page({
 
   onLoad() {
   },
+
+  // 图片预览交互
+  onPreviewImage(e) {
+    const urls = e.currentTarget.dataset.urls || [];
+    if (urls.length === 0) return;
+    wx.previewImage({
+      current: urls[0],
+      urls: urls
+    });
+  }
 })
