@@ -2,6 +2,9 @@ Page({
   data: {
     motto: '欢迎使用我和我的宠物小程序',
 
+    // 新增：搜索关键词
+    searchKeyword: '',
+
     // 新增：宠物动态假数据
     feedList: [
       {
@@ -28,6 +31,16 @@ Page({
     ]
   },
   onLoad() {},
+
+  // 新增：搜索框输入交互骨架
+  onSearchInput(e) {
+    const keyword = e.detail.value;
+    this.setData({
+      searchKeyword: keyword
+    });
+    // 仅做本地输入值收集，控制台打印输入关键词
+    console.log('当前搜索关键词:', keyword);
+  },
 
   // 新增：跳转到分类页面
   goToCategory() {

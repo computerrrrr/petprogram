@@ -1,5 +1,20 @@
 <!-- 首页 - 骨架占位 -->
 <view class="container">
+  <!-- 新增：顶部搜索框 UI 骨架 -->
+  <view class="search-bar">
+    <view class="search-box">
+      <text class="search-icon">🔍</text>
+      <input 
+        class="search-input" 
+        placeholder="搜索宠物品种、动态..." 
+        placeholder-style="color: #CCCCCC;" 
+        value="{{searchKeyword}}"
+        bindinput="onSearchInput"
+        confirm-type="search"
+      />
+    </view>
+  </view>
+  
   <view class="placeholder-box">
     <text class="placeholder-text">🏠 首页内容区域</text>
     <text class="motto">{{motto}}</text>
