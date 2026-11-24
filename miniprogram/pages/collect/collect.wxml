@@ -1,4 +1,38 @@
-<!-- 我的收藏页面 - 空白骨架 -->
+<!-- 我的收藏页面 - 静态UI骨架 -->
 <view class="collect-container">
-  <text class="placeholder-text">我的收藏页面</text>
+  
+  <!-- 页面标题 -->
+  <view class="page-header">
+    <text class="page-title">我的收藏</text>
+    <text class="page-desc">以下为您收藏的萌宠动态</text>
+  </view>
+
+  <!-- 收藏列表骨架 -->
+  <view class="feed-list" wx:if="{{collectList.length > 0}}">
+    <view class="feed-card" wx:for="{{collectList}}" wx:key="id" bindtap="goToDetail" data-id="{{item.id}}">
+      <!-- 顶部：分类标签 + 用户昵称 -->
+      <view class="feed-header">
+        <view class="feed-tag">{{item.category}}</view>
+        <text class="feed-nickname">{{item.nickname}}</text>
+      </view>
+      
+      <!-- 宠物配图占位区域 -->
+      <view class="feed-image-box">
+        <text class="feed-image-placeholder">🖼️ 点击预览图片</text>
+      </view>
+      
+      <!-- 底部：文字简介 -->
+      <view class="feed-desc-box">
+        <text class="feed-desc">{{item.desc}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 空状态占位 -->
+  <view class="empty-state" wx:else>
+    <text class="empty-icon">🐾</text>
+    <text class="empty-text">暂无收藏内容</text>
+  </view>
+
 </view>
+
