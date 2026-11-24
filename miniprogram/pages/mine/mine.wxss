@@ -105,6 +105,49 @@
   box-shadow: 0 4rpx 12rpx rgba(255, 140, 71, 0.1);
 }
 
+/* 新增：功能入口卡片组样式 */
+.feature-group {
+  background-color: #FFFFFF;
+  border-radius: 24rpx;
+  padding: 0 30rpx;
+  margin-bottom: 30rpx;
+  box-shadow: 0 4rpx 12rpx rgba(255, 140, 71, 0.1);
+}
+
+.feature-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30rpx 0;
+  border-bottom: 2rpx solid #F5F5F5;
+}
+
+/* 最后一个卡片不显示底部分割线 */
+.feature-card:last-child {
+  border-bottom: none;
+}
+
+.feature-left {
+  display: flex;
+  align-items: center;
+}
+
+.feature-icon {
+  font-size: 40rpx;
+  margin-right: 20rpx;
+}
+
+.feature-text {
+  font-size: 30rpx;
+  color: #333333;
+}
+
+.feature-arrow {
+  font-size: 32rpx;
+  color: #CCCCCC;
+}
+
+
 /* 2. 我的作品模块 */
 .section-header {
   display: flex;
