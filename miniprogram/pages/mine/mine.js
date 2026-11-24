@@ -39,5 +39,12 @@ Page({
       current: urls[0],
       urls: urls
     });
+  },
+
+  // 新增：功能入口点击空事件
+  onFeatureTap(e) {
+    const name = e.currentTarget.dataset.name;
+    console.log('点击了功能入口:', name);
+    // 骨架阶段暂不实现跳转等业务逻辑
   }
 })
