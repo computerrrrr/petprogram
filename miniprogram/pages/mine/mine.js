@@ -46,13 +46,20 @@ Page({
     const name = e.currentTarget.dataset.name;
     console.log('点击了功能入口:', name);
 
-    // 新增：我的发布跳转逻辑骨架
+    // 我的发布跳转逻辑
     if (name === '我的发布') {
       wx.navigateTo({
-        url: '/pages/detail/detail?id=888' // 传入模拟id参数
+        url: '/pages/detail/detail?id=888'
       });
-    } else {
-      // 其余卡片（我的收藏、设置）依旧保留空点击事件提示
+    } 
+    // 新增：我的收藏跳转逻辑骨架
+    else if (name === '我的收藏') {
+      wx.navigateTo({
+        url: '/pages/collect/collect'
+      });
+    } 
+    // 设置卡片依旧保留空点击事件
+    else {
       wx.showToast({
         title: '功能开发中',
         icon: 'none'

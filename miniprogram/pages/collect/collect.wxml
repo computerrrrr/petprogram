@@ -1,0 +1,4 @@
+<!-- 我的收藏页面 - 空白骨架 -->
+<view class="collect-container">
+  <text class="placeholder-text">我的收藏页面</text>
+</view>
