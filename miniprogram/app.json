@@ -6,7 +6,8 @@
     "pages/publish/publish",
     "pages/categoryDetail/categoryDetail",
     "pages/detail/detail",
-    "pages/collect/collect"
+    "pages/collect/collect",
+    "pages/setting/setting"
   ],
   "window": {
     "navigationBarBackgroundColor": "#FF8C47",

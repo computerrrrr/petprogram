@@ -1,0 +1,4 @@
+<!-- 设置页面 - 空白骨架 -->
+<view class="setting-container">
+  <text class="placeholder-text">设置页面</text>
+</view>

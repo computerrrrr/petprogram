@@ -58,11 +58,10 @@ Page({
         url: '/pages/collect/collect'
       });
     } 
-    // 设置卡片依旧保留空点击事件
-    else {
-      wx.showToast({
-        title: '功能开发中',
-        icon: 'none'
+    // 新增：设置跳转逻辑骨架
+    else if (name === '设置') {
+      wx.navigateTo({
+        url: '/pages/setting/setting'
       });
     }
   }
