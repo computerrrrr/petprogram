@@ -1,13 +1,17 @@
 <!-- 我的页面 - 静态UI骨架 -->
 <view class="mine-container">
 
-  <!-- 1. 头像 + 昵称展示区域 -->
+  <!-- 1. 用户信息展示区域 (优化) -->
   <view class="user-info-card">
-    <view class="avatar-box">
-      <text class="avatar-emoji">🐾</text>
+    <view class="user-info-left">
+      <!-- 使用 image 组件展示默认头像 -->
+      <image class="avatar-img" src="/images/default_avatar.png" mode="aspectFill"></image>
+      <view class="user-info-text">
+        <text class="nickname">萌宠爱好者</text>
+        <text class="user-id">ID: 88888888</text>
+      </view>
     </view>
-    <text class="nickname">宠物爱好者</text>
-    <text class="user-id">ID: 10086</text>
+    <view class="edit-btn">编辑</view>
   </view>
 
   <!-- 2. 我的作品模块占位卡片 -->
@@ -16,6 +20,7 @@
       <text class="section-title">我的作品</text>
       <text class="section-more">查看全部 ></text>
     </view>
+    
     <!-- 新增：有数据时渲染列表骨架 -->
     <view class="feed-list" wx:if="{{myWorksList.length > 0}}">
       <view class="feed-card" wx:for="{{myWorksList}}" wx:key="id" bindtap="goToDetail" data-id="{{item.id}}">

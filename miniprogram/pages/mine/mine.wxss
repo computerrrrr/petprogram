@@ -6,32 +6,40 @@
   box-sizing: border-box;
 }
 
-/* 1. 用户信息区 */
+/* 1. 用户信息区 (优化为左右布局) */
 .user-info-card {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  padding: 50rpx 0 40rpx;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+  border-radius: 24rpx;
+  padding: 30rpx;
+  margin-bottom: 30rpx;
+  box-shadow: 0 4rpx 12rpx rgba(255, 140, 71, 0.1);
 }
 
-.avatar-box {
-  width: 160rpx;
-  height: 160rpx;
-  border-radius: 50%;
-  background-color: #FFFFFF;
-  box-shadow: 0 8rpx 20rpx rgba(255, 140, 71, 0.2);
+.user-info-left {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-bottom: 20rpx;
 }
 
-.avatar-emoji {
-  font-size: 80rpx;
+/* 新增：头像图片样式 */
+.avatar-img {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  background-color: #FFF1E6;
+  margin-right: 24rpx;
+  border: 4rpx solid #FFF1E6;
+}
+
+.user-info-text {
+  display: flex;
+  flex-direction: column;
 }
 
 .nickname {
-  font-size: 36rpx;
+  font-size: 34rpx;
   font-weight: bold;
   color: #333333;
   margin-bottom: 8rpx;
@@ -40,6 +48,15 @@
 .user-id {
   font-size: 24rpx;
   color: #999999;
+}
+
+/* 新增：编辑按钮样式 */
+.edit-btn {
+  font-size: 24rpx;
+  color: #FF8C47;
+  border: 1rpx solid #FF8C47;
+  padding: 8rpx 24rpx;
+  border-radius: 30rpx;
 }
 
 /* 通用卡片样式 */
