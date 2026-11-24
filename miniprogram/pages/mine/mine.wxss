@@ -59,6 +59,43 @@
   border-radius: 30rpx;
 }
 
+/* 新增：统计信息卡片样式 */
+.stats-card {
+  display: flex;
+  align-items: center;
+  background-color: #FFFFFF;
+  border-radius: 24rpx;
+  padding: 30rpx 0;
+  margin-bottom: 30rpx;
+  box-shadow: 0 4rpx 12rpx rgba(255, 140, 71, 0.1);
+}
+
+.stats-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.stats-num {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #FF8C47; /* 数字使用暖橙色高亮 */
+  margin-bottom: 8rpx;
+}
+
+.stats-label {
+  font-size: 24rpx;
+  color: #666666;
+}
+
+.stats-divider {
+  width: 2rpx;
+  height: 60rpx;
+  background-color: #F5F5F5;
+}
+
 /* 通用卡片样式 */
 .section-card {
   background-color: #FFFFFF;
